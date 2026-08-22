@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.bak
+*.tmp
+release-staging/
+
+# Local editor state
+.vscode/
+.idea/

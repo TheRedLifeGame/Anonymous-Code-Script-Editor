@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile Python sources
+        run: python -m compileall -q SOURCE/Editor SOURCE/tests
+
+      - name: Validate the bundled project
+        run: |
+          python SOURCE/Editor/ac_script_editor.py --validate SOURCE/project.json
+          python -m SOURCE.Editor.ac_script_editor --validate SOURCE/project.json
+
+      - name: Run Python tests
+        run: python -m unittest discover -s SOURCE/tests -p "test_*.py" -v
+
+      - name: Run PowerShell tests
+        shell: pwsh
+        run: ./SOURCE/tests/Test-ScenarioBuild.ps1

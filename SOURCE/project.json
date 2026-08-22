@@ -1,0 +1,430 @@
+{
+  "schemaVersion": 2,
+  "metadata": {
+    "title": "ANONYMOUS;CODE PATCHING GUIDE",
+    "version": "1.0.0",
+    "continuity": "Tutorial; One Scene"
+  },
+  "voiceCharacters": [
+    "ポロン",
+    "モモ",
+    "ウインド",
+    "クロス"
+  ],
+  "launchAlias": {
+    "storage": "ac_00_01.ks",
+    "sourceScene": "ac_ex_guide",
+    "internalHash": "dab8b2d721f84912083080dca0aeef59"
+  },
+  "scenes": [
+    {
+      "id": "ac_ex_guide",
+      "title": "ANONYMOUS;CODE PATCHING GUIDE",
+      "template": {
+        "storage": "ac_03_20.ks",
+        "target": "*flashback_1",
+        "mode": "blank"
+      },
+      "presentation": {
+        "background": "acb_0000n",
+        "music": "bgm04",
+        "hideUnlisted": true,
+        "speakerFocus": true,
+        "speakerGroups": {
+          "$narration": [
+            "クロス",
+            "ウインド"
+          ],
+          "ポロン": [
+            "クロス",
+            "ウインド"
+          ],
+          "クロス": [
+            "クロス",
+            "ウインド"
+          ],
+          "ウインド": [
+            "クロス",
+            "ウインド"
+          ],
+          "モモ": [
+            "モモ"
+          ]
+        },
+        "characters": [
+          {
+            "id": "ポロン",
+            "file": "ch01_cl01_p01.psb",
+            "position": "中",
+            "show": false,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "order": 0,
+            "scale": 100
+          },
+          {
+            "id": "モモ",
+            "file": "ch02_cl01_p01.psb",
+            "position": "中",
+            "show": true,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "order": 1,
+            "scale": 100
+          },
+          {
+            "id": "クロス",
+            "file": "ch03_cl01_p01.psb",
+            "position": "左",
+            "show": true,
+            "x": -420,
+            "y": 0,
+            "z": 0,
+            "order": 1,
+            "scale": 100
+          },
+          {
+            "id": "ウインド",
+            "file": "ch18_cl03_p01.psb",
+            "position": "右",
+            "show": true,
+            "x": 420,
+            "y": 0,
+            "z": 0,
+            "order": 2,
+            "scale": 100
+          }
+        ]
+      },
+      "next": null,
+      "pages": [
+        {
+          "speaker": "",
+          "text": "WELCOME TO THE ANONYMOUS;CODE PATCHING GUIDE"
+        },
+        {
+          "speaker": "",
+          "text": "You will be guided through the developer project included with the patch."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_09_06_pol0006",
+          "text": "Yo, Anon. If you're seeing this, your custom scenario compiled and loaded."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_00_01_pol0016",
+          "text": "Heh. Not bad, right?"
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_02_17_win0012",
+          "text": "WOOOO! THEY MADE IT IN! Takaoka, our newest anon's alive! That's sick!"
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_01_03_crs0003",
+          "text": "You're celebrating a little early."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_01_02_crs0010",
+          "text": "Anon, open the release's SOURCE folder. Read DEVELOPER-GUIDE.md, then open project.json."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0034",
+          "text": "Umm...please don't let them overwhelm you."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0038",
+          "text": "Keeping the guide open while you work should make the rest much easier to follow."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_00_01_pol0016",
+          "text": "C'mon, we're not that bad."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_04_pol0002",
+          "text": "Anyway, project.json is where you set up your generated scenes—what they show,"
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_02_pol0032",
+          "text": "what they say, and where they go."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_02_13_crs0008",
+          "text": "More precisely: generated scenes, presentation data, next edges, and story injections."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_04_03_mom0005",
+          "text": "Please use the engine's Japanese speaker keys exactly as they appear."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0013",
+          "text": "For us, that's ポロン, モモ, クロス, and ウインド."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_02_pol0005",
+          "text": "Yeah, copy 'em. Don't make any lookalikes, Anon."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_02_03_pol0024",
+          "text": "And an empty speaker string means narration. No name in the message box."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_05_14_mom0008",
+          "text": "speakerGroups controls which configured characters remain visible for each speaker."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0038",
+          "text": "It can also keep a first-person speaker's own sprite hidden."
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_01_04_win0011",
+          "text": "And voiceCharacters lets you reuse matching Japanese voice cues already installed by the game!"
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_01_04_win0013",
+          "text": "The patch itself doesn't ship extra audio, though."
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_01_04_win0013",
+          "text": "No free game assets, sorryyy!"
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_01_02_crs0010",
+          "text": "Before you inject anything into the real story, inspect the route first."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_07_19_crs0009",
+          "text": "Run tools/Inspect-Scenario.ps1 on the decompiled scenario."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_02_03_pol0024",
+          "text": "It'll give ya the labels, dialogue, speakers, counts, and outgoing edges."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_00_01_pol0026",
+          "text": "Trust me, guessing is how it becomes a shitshow."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_10_07_crs0002",
+          "text": "Crude, but correct. Verify the exact target before you edit it."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0034",
+          "text": "If you're only testing a scene, you don't need an injection at all."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_04_03_mom0005",
+          "text": "Set launchAlias.sourceScene to its id, run the fan launcher, and choose GAME START."
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_01_04_win0029",
+          "text": "Boom! Straight into your scene! Great for testing and navigating."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_02_pol0005",
+          "text": "For the real story, use an edge injection."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_02_pol0005",
+          "text": "You replace one verified label-to-label transition with your custom scene."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_01_02_crs0022",
+          "text": "source selects the existing storage and label."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_05_10_crs0002",
+          "text": "expectedNext proves the original route is still what you inspected."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_01_02_crs0004",
+          "text": "If it changed, let the build fail."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_00_01_pol0011",
+          "text": "In other words: don't bulldoze through a safety check just 'cause you're impatient, Anon."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0013",
+          "text": "destination is your branch."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_05_14_mom0008",
+          "text": "Then point your generated scene's next edge to the displaced original destination,"
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0038",
+          "text": "and the base story can resume."
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_02_17_win0006",
+          "text": "Need to cut in at one exact line instead? That's afterLine!"
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_01_04_win0011",
+          "text": "One exact speaker, one exact line, then—bam!—your scene branches right after it."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_01_02_crs0016",
+          "text": "The match has to be unique and case-exact."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_01_02_crs0021",
+          "text": "expectedNext still applies."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_07_19_crs0009",
+          "text": "The builder creates a resumeTarget for the continuation."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0038",
+          "text": "Your inserted scene should point next to that resumeTarget."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0038",
+          "text": "That allows the original animation state and downstream edge to continue normally."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_02_pol0005",
+          "text": "And use unique ac_ex_ ids and unique resume labels."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_00_01_pol0011",
+          "text": "Don't go stepping on ids unless you're deliberately making an override."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_05_10_crs0002",
+          "text": "The installer also checks for the exact archive hashes it targets."
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_01_02_crs0004",
+          "text": "Uninstall restores the backup."
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_01_04_win0011",
+          "text": "You've got startup, edge-injection, and after-line examples right beside the guide!"
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_03_05_win0002",
+          "text": "Copy one, change one thing, test it, repeat."
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_02_17_win0012",
+          "text": "Future-you will be sooo grateful!"
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0038",
+          "text": "I think that's everything important."
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_05_14_mom0008",
+          "text": "If something doesn't work, please check the guide and the inspector output"
+        },
+        {
+          "speaker": "モモ",
+          "voiceId": "ac_01_07_mom0013",
+          "text": "before changing several things at once."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_07_pol0044",
+          "text": "Yeah. One problem at a time."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_07_pol0044",
+          "text": "You've got this, Anon."
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_02_17_win0006",
+          "text": "WOOO! LOOK AT TAKAOKA GIVING RESPONSIBLE ADVICE!"
+        },
+        {
+          "speaker": "ウインド",
+          "voiceId": "ac_02_17_win0012",
+          "text": "Somebody save this moment!"
+        },
+        {
+          "speaker": "クロス",
+          "voiceId": "ac_01_04_crs0002",
+          "text": "Too late. He'll deny it happened."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_00_01_pol0026",
+          "text": "Shut up! We're done here!"
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_07_pol0042",
+          "text": "Nakano Symphonies did its job."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_02_pol0021",
+          "text": "Read the full guide if you need the details, Anon."
+        },
+        {
+          "speaker": "ポロン",
+          "voiceId": "ac_01_02_pol0005",
+          "text": "Aight—back to the title screen!"
+        }
+      ]
+    }
+  ],
+  "injections": []
+}

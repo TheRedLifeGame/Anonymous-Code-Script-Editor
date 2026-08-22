@@ -1,0 +1,22 @@
+{
+  "sceneNext": {
+    "storage": "ac_11_08.ks",
+    "target": "*dummy3"
+  },
+  "injection": {
+    "kind": "edge",
+    "id": "before_true_ending_finalization",
+    "source": {
+      "storage": "ac_11_08.ks",
+      "target": "*dummy2"
+    },
+    "expectedNext": {
+      "storage": "ac_11_08.ks",
+      "target": "*dummy3"
+    },
+    "destination": {
+      "storage": "ac_ex_guide.ks",
+      "target": "*start"
+    }
+  }
+}

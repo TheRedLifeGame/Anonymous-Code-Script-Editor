@@ -1,0 +1,50 @@
+{
+  "name": "ANONYMOUS;CODE Patching Guide",
+  "version": "1.0.0",
+  "target": "English Steam ANONYMOUS;CODE with the required Committee of Zero c0patch installed",
+  "launchMethod": "Temporary GAME START archive-index overlay",
+  "entryScenario": "ac_00_01.ks -> temporary alias of ac_ex_guide.ks*start",
+  "scenes": 1,
+  "pages": 65,
+  "normalStoryInjectionEnabled": false,
+  "presentation": {
+    "nativeSpeakerFields": true,
+    "customBackground": "acb_0000n",
+    "speakerFocus": true,
+    "configuredCharacters": [
+      "Pollon",
+      "Momo",
+      "Cross",
+      "Wind"
+    ],
+    "pollonFirstPersonHidden": true,
+    "speakerGroups": "Cross+Wind for narration/Pollon/Cross/Wind; Momo alone for Momo",
+    "explicitSpriteCoordinates": true,
+    "inheritedVisualCommands": false,
+    "japaneseVoiceCues": "Referenced from the installed game; no audio is distributed"
+  },
+  "authoring": {
+    "schemaVersion": 2,
+    "project": "SOURCE/project.json",
+    "schema": "SOURCE/scene-project.schema.json",
+    "guide": "SOURCE/DEVELOPER-GUIDE.md",
+    "entryMethods": [
+      "launchAlias",
+      "edge injection",
+      "afterLine injection"
+    ],
+    "inspectionTools": [
+      "SOURCE/tools/Inspect-Scenario.ps1",
+      "SOURCE/tools/List-Speakers.ps1"
+    ]
+  },
+  "base": {
+    "c0patch_info.psb.m": "4F912510695F05465DC3E1E5A6BE5A22A8936E45AE403836FACB125BFCDE7502",
+    "c0patch_body.bin": "71D9E8B978CE4AF6A7E20C00336656A9667BD6777F2D3FF2670C2FCDD6EA06E2"
+  },
+  "patched": {
+    "normalInfo": "7485977DDB925E6159A5841571CA5BCA0A3495A4FAB0A1C16CF5A9AD6C9B47E4",
+    "fanModeInfo": "ED9043D5902FF1F52EE4E9EECEE77ACB07EE376332B780D66D067B5F096B4248",
+    "c0patch_body.bin": "313C45210769AA50662FCEDB9C459975BFDF5BA334F3F9AA8CBDAC92F21118A2"
+  }
+}

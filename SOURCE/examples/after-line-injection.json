@@ -1,0 +1,27 @@
+{
+  "sceneNext": {
+    "storage": "ac_07_03.ks",
+    "target": "*fan_resume_after_look"
+  },
+  "injection": {
+    "kind": "afterLine",
+    "id": "after_cross_says_look",
+    "source": {
+      "storage": "ac_07_03.ks",
+      "target": "*check_BMI2"
+    },
+    "line": {
+      "speaker": "クロス",
+      "text": "Look at this."
+    },
+    "expectedNext": {
+      "storage": "ac_07_03.ks",
+      "target": "*check_cross"
+    },
+    "destination": {
+      "storage": "ac_ex_guide.ks",
+      "target": "*start"
+    },
+    "resumeTarget": "*fan_resume_after_look"
+  }
+}
